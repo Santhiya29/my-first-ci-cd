@@ -1,0 +1,15 @@
+name: "first ci cd workflow"
+on:
+  push:
+     branches: [main]
+
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout Repository
+         uses: actions/checkout@v3
+
+       - name: Print a message
+         run: |
+          echo "This job is running on a GitHub-hosted runner."
